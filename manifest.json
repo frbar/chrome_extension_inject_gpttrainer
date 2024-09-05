@@ -1,0 +1,19 @@
+{
+  "name": "FRBAR - Inject GPT Trainer",
+  "version": "1.0",
+  "description": "Example extension to inject GPT Trainer JavaScript snippet",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://xxx/*"],
+      "run_at": "document_start",
+      "js": ["inject.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "myscript.js" ],
+      "matches": [ "https://*/*" ]
+    }
+  ]
+}
